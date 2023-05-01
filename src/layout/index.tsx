@@ -1,8 +1,9 @@
-import { FC, ReactNode } from 'react';
-import { Box, styled } from '@mui/material';
+import { FC, ReactNode, cloneElement } from 'react';
+import { Box, CssBaseline, Toolbar, styled, useScrollTrigger } from '@mui/material';
 import Header from './header';
 import Footer from './footer';
 import MainLayout from './main';
+import Banner from './banner';
 
 interface ILayoutProps {
   children: ReactNode;
@@ -11,7 +12,10 @@ interface ILayoutProps {
 const Layout: FC<ILayoutProps> = ({ children }) => {
   return (
     <StyledLayout>
+      <CssBaseline />
       <Header />
+      <Toolbar />
+      <Banner />
       <MainLayout>{children}</MainLayout>
       <Footer />
     </StyledLayout>
@@ -20,4 +24,6 @@ const Layout: FC<ILayoutProps> = ({ children }) => {
 
 export default Layout;
 
-const StyledLayout = styled(Box)(() => ({}));
+const StyledLayout = styled(Box)(() => ({
+  color: 'white'
+}));

@@ -66,8 +66,11 @@ const ThemeProvider: FC<ThemeProviderProps> = ({ children }) => {
       MuiMenuItem: {
         styleOverrides: {
           root: {
-            background: 'white',
-            width: '45vw'
+            width: '45vw',
+            color: '#f5f5f5'
+          },
+          selected: {
+            backgroundColor: 'red'
           }
         }
       }

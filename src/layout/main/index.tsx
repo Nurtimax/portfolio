@@ -15,6 +15,4 @@ const MainLayout: FC<MainLayoutProps> = ({ children }) => {
 
 export default MainLayout;
 
-const StyledMainLayout = styled(Box)(() => ({
-  padding: '5rem 0 0'
-}));
+const StyledMainLayout = styled(Box)(() => ({}));
