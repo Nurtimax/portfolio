@@ -1,1 +1,5 @@
-export {};
+export { default as MainHeader } from './header';
+export { default as MainAbout } from './about';
+export { default as MainContact } from './contact';
+export { default as MainPorjects } from './projects';
+export { default as MainServices } from './services';
