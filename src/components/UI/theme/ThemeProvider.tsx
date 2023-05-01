@@ -67,12 +67,75 @@ const ThemeProvider: FC<ThemeProviderProps> = ({ children }) => {
         styleOverrides: {
           root: {
             width: '45vw',
-            color: '#f5f5f5'
-          },
-          selected: {
-            backgroundColor: 'red'
+            color: '#f5f5f5',
+            '&.Mui-selected': {
+              color: 'red'
+            }
           }
         }
+      },
+      MuiTypography: {
+        variants: [
+          {
+            props: { variant: 'h6' },
+            style: ({ theme }) => ({
+              [theme.breakpoints.up('md')]: {
+                fontSize: '35px'
+              },
+              [theme.breakpoints.down('sm')]: {
+                fontSize: '26px'
+              },
+              [theme.breakpoints.down('xs')]: {
+                fontSize: '20px'
+              }
+            })
+          },
+          {
+            props: { variant: 'h5' },
+            style: ({ theme }) => ({
+              [theme.breakpoints.up('md')]: {
+                fontSize: '39px'
+              },
+              [theme.breakpoints.down('sm')]: {
+                fontSize: '30px'
+              }
+            })
+          },
+          {
+            props: { variant: 'h4' },
+            style: ({ theme }) => ({
+              fontWeight: '600',
+              [theme.breakpoints.up('md')]: {
+                fontSize: '45px'
+              },
+              [theme.breakpoints.down('sm')]: {
+                fontSize: '32px'
+              }
+            })
+          },
+          {
+            props: { variant: 'subtitle1' },
+            style: ({ theme }) => ({
+              [theme.breakpoints.up('md')]: {
+                fontSize: '18px'
+              },
+              [theme.breakpoints.down('sm')]: {
+                fontSize: '16px'
+              }
+            })
+          }
+        ]
+      },
+      MuiButton: {
+        variants: [
+          {
+            props: { variant: 'contained' },
+            style: ({ theme }) => ({
+              background: '#F10000',
+              color: '#f5f5f5'
+            })
+          }
+        ]
       }
     }
   });

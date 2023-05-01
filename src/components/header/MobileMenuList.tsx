@@ -2,13 +2,13 @@ import { FC, useState } from 'react';
 import { Box, BoxProps, IconButton, Menu, MenuItem, styled } from '@mui/material';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { MENULISTS } from '@/utils/constants/menu-list';
-import { animateScroll as scroll } from 'react-scroll';
 import { scrollToElement } from '@/utils/generals';
 
 interface MobileMenuListProps extends BoxProps {}
 
 const MobileMenuList: FC<MobileMenuListProps> = ({ ...rest }) => {
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState<null | HTMLElement>(null);
+  const [selected, setSelected] = useState<number>(0);
 
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
@@ -18,6 +18,11 @@ const MobileMenuList: FC<MobileMenuListProps> = ({ ...rest }) => {
 
   const handleMobileMenuClose = () => {
     setMobileMoreAnchorEl(null);
+  };
+
+  const clickMenuItemHandler = (path: string, id: number) => {
+    setSelected(id);
+    scrollToElement(path);
   };
 
   const mobileMenuId = 'primary-search-account-menu-mobile';
@@ -52,7 +57,11 @@ const MobileMenuList: FC<MobileMenuListProps> = ({ ...rest }) => {
         onClose={handleMobileMenuClose}
       >
         {MENULISTS.map((list) => (
-          <MenuItem key={list.id} onClick={() => scrollToElement(list.path)}>
+          <MenuItem
+            key={list.id}
+            onClick={() => clickMenuItemHandler(list.path, list.id)}
+            selected={list.id === selected}
+          >
             {list.children}
           </MenuItem>
         ))}

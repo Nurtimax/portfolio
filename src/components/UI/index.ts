@@ -1,1 +1,2 @@
-export { default as ThemeProvider } from './ThemeProvider';
+export { default as ThemeProvider } from './theme/ThemeProvider';
+export { default as Card } from './card';
