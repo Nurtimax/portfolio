@@ -1,12 +1,15 @@
 import { FC } from 'react';
 import { Box, Container, styled } from '@mui/material';
+import { MainBanner } from '@/components';
 
 interface BannerProps {}
 
 const Banner: FC<BannerProps> = ({}) => {
   return (
     <StyledBanner>
-      <Container>Banner</Container>
+      <Container>
+        <MainBanner />
+      </Container>
     </StyledBanner>
   );
 };
@@ -14,5 +17,6 @@ const Banner: FC<BannerProps> = ({}) => {
 export default Banner;
 
 const StyledBanner = styled(Box)(() => ({
-    background: '#292929'
+  background: '#292929',
+  width: '100%'
 }));
