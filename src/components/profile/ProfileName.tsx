@@ -1,9 +1,14 @@
 import { FC } from 'react';
 import { Box, Typography, styled } from '@mui/material';
 
-interface ProfileNameProps {}
+const StyledProfileName = styled(Box)(() => ({
+  alignSelf: 'flex-end',
+  '& h2': {
+    color: 'red'
+  }
+}));
 
-const ProfileName: FC<ProfileNameProps> = ({}) => {
+const ProfileName: FC = () => {
   return (
     <StyledProfileName>
       <Typography component="h4" variant="h6">
@@ -17,10 +22,3 @@ const ProfileName: FC<ProfileNameProps> = ({}) => {
 };
 
 export default ProfileName;
-
-const StyledProfileName = styled(Box)(({ theme }) => ({
-  alignSelf: 'flex-end',
-  '& h2': {
-    color: 'red'
-  }
-}));

@@ -1,7 +1,7 @@
 import { FC, ReactNode, useMemo } from 'react';
 import { Box, BoxProps, styled } from '@mui/material';
 import { useRouter } from 'next/router';
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { Link } from 'react-scroll';
 
 interface MenuItemProps {
   to: string;
@@ -11,6 +11,11 @@ interface MenuItemProps {
 interface IStyledMenuItem extends BoxProps {
   active: string;
 }
+
+const StyledMenuItem = styled(Box)<IStyledMenuItem>(({ active }) => ({
+  color: active === 'true' ? 'red' : '#f5f5f5',
+  cursor: 'pointer'
+}));
 
 const MenuItem: FC<MenuItemProps> = ({ to, children }) => {
   const { pathname } = useRouter();
@@ -32,8 +37,3 @@ const MenuItem: FC<MenuItemProps> = ({ to, children }) => {
 };
 
 export default MenuItem;
-
-const StyledMenuItem = styled(Box)<IStyledMenuItem>(({ active }) => ({
-  color: active === 'true' ? 'red' : '#f5f5f5',
-  cursor: 'pointer'
-}));

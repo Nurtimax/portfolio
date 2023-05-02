@@ -1,10 +1,14 @@
 import { FC } from 'react';
 import { Grid, styled } from '@mui/material';
+
 import ProfilePicture from '../profile/ProfilePicture';
 
-interface ProfilePictureGridItemProps {}
+const StyledProfilePictureGridItem = styled(Grid)(() => ({
+  display: 'flex',
+  alignItems: 'center'
+}));
 
-const ProfilePictureGridItem: FC<ProfilePictureGridItemProps> = ({}) => {
+const ProfilePictureGridItem: FC = () => {
   return (
     <StyledProfilePictureGridItem item md={6} xs={12}>
       <ProfilePicture />
@@ -13,8 +17,3 @@ const ProfilePictureGridItem: FC<ProfilePictureGridItemProps> = ({}) => {
 };
 
 export default ProfilePictureGridItem;
-
-const StyledProfilePictureGridItem = styled(Grid)(() => ({
-  display: 'flex',
-  alignItems: 'center'
-}));

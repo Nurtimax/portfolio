@@ -1,4 +1,5 @@
 import { combineReducers } from '@reduxjs/toolkit';
+
 import { colorMode } from '../slices';
 
 const rootReducer = combineReducers({

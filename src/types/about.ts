@@ -1,6 +1,4 @@
-import { ReactNode } from 'react';
-
-export default interface IABOUTME_AND_MY_SKILLS {
+export default interface IAboutMeAndMySkillls {
   id: number;
   title: string;
   description: string;

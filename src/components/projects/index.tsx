@@ -1,14 +1,10 @@
-import { FC } from 'react'
-import { Box, styled } from '@mui/material'
+import { FC } from 'react';
+import { Box, styled } from '@mui/material';
 
-interface IProjectsProps {
-  
-}
+const StyledProjects = styled(Box)(() => ({}));
 
-const Porjects: FC<IProjectsProps> = ({}) => {
+const Porjects: FC = () => {
   return <StyledProjects>Porjects</StyledProjects>;
 };
 
 export default Porjects;
-
-const StyledProjects = styled(Box)(() => ({}))

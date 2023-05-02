@@ -1,21 +1,6 @@
 import { FC } from 'react';
 import { Box, Typography, styled } from '@mui/material';
 
-interface ILogoProps {}
-
-const Logo: FC<ILogoProps> = ({}) => {
-  return (
-    <StyledLogo>
-      <Typography component="span" className="first_slice">
-        N
-      </Typography>
-      <Typography component="span">urtimax</Typography>
-    </StyledLogo>
-  );
-};
-
-export default Logo;
-
 const StyledLogo = styled(Box)(() => ({
   display: 'flex',
   '& .MuiTypography-root': {
@@ -28,3 +13,16 @@ const StyledLogo = styled(Box)(() => ({
     fontWeight: 600
   }
 }));
+
+const Logo: FC = () => {
+  return (
+    <StyledLogo>
+      <Typography component="span" className="first_slice">
+        N
+      </Typography>
+      <Typography component="span">urtimax</Typography>
+    </StyledLogo>
+  );
+};
+
+export default Logo;

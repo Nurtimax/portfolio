@@ -1,11 +1,14 @@
 import { FC } from 'react';
 import { Grid, styled } from '@mui/material';
+
 import ProfilePictureGridItem from './ProfilePictureGridItem';
 import AboutHeadlines from './AboutHeadlines';
 
-interface IMainAboutProps {}
+const StyledMainAbout = styled(Grid)(() => ({
+  height: '100%'
+}));
 
-const MainAbout: FC<IMainAboutProps> = ({}) => {
+const MainAbout: FC = () => {
   return (
     <StyledMainAbout container>
       <ProfilePictureGridItem />
@@ -15,7 +18,3 @@ const MainAbout: FC<IMainAboutProps> = ({}) => {
 };
 
 export default MainAbout;
-
-const StyledMainAbout = styled(Grid)(() => ({
-  height: '100%'
-}));

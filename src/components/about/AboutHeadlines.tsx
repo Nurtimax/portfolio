@@ -1,12 +1,16 @@
-import { FC, ReactNode } from 'react';
-import { Grid, Typography, styled } from '@mui/material';
-import { ABOUTME_AND_MY_SKILLS } from '@/utils/constants/about';
+import { FC } from 'react';
+import { Grid, styled } from '@mui/material';
+
 import Skill from './Skill';
 import AboutMe from './AboutMe';
 
-interface IAboutHeadlinesProps {}
+import { ABOUTME_AND_MY_SKILLS } from '@/utils/constants/about';
 
-const AboutHeadlines: FC<IAboutHeadlinesProps> = ({}) => {
+const StyledAboutHeadlines = styled(Grid)(() => ({
+  display: 'grid'
+}));
+
+const AboutHeadlines: FC = () => {
   return (
     <StyledAboutHeadlines item md={6} xs={12}>
       <AboutMe />
@@ -18,7 +22,3 @@ const AboutHeadlines: FC<IAboutHeadlinesProps> = ({}) => {
 };
 
 export default AboutHeadlines;
-
-const StyledAboutHeadlines = styled(Grid)(() => ({
-  display: 'grid'
-}));

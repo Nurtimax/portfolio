@@ -116,6 +116,7 @@ const ThemeProvider: FC<ThemeProviderProps> = ({ children }) => {
           {
             props: { variant: 'subtitle1' },
             style: ({ theme }) => ({
+              // color: theme.palette.text.disabled,
               [theme.breakpoints.up('md')]: {
                 fontSize: '18px'
               },
@@ -130,7 +131,7 @@ const ThemeProvider: FC<ThemeProviderProps> = ({ children }) => {
         variants: [
           {
             props: { variant: 'contained' },
-            style: ({ theme }) => ({
+            style: () => ({
               background: '#F10000',
               color: '#f5f5f5'
             })

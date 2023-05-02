@@ -9,7 +9,7 @@ const findSkillsAndChangeToReactElement = (
 
   let count = 0;
 
-  const findSkill = title.split(',').map((item, index) => {
+  const findSkill = title.split(',').map((item) => {
     if (findElement.some((el) => el === item)) {
       count = count + 1;
       return (

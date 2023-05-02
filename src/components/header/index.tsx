@@ -1,13 +1,23 @@
 import { FC } from 'react';
-import { Box, Toolbar, ToolbarProps, styled } from '@mui/material';
-import Logo from '../logo';
-import NavigationMenu from './NavigationMenu';
+import { Toolbar, styled } from '@mui/material';
+import dynamic from 'next/dynamic';
 
-interface IMainHeaderProps extends ToolbarProps {}
+const Logo = dynamic(() => import('../logo'), {
+  loading: () => <p>Loading...</p>
+});
+const NavigationMenu = dynamic(() => import('./NavigationMenu'), {
+  loading: () => <p>Loading...</p>
+});
 
-const MainHeader: FC<IMainHeaderProps> = ({ ...rest }) => {
+const StyledMainHeader = styled(Toolbar)(() => ({
+  padding: '0 !important',
+  display: 'flex',
+  justifyContent: 'space-between'
+}));
+
+const MainHeader: FC = () => {
   return (
-    <StyledMainHeader {...rest}>
+    <StyledMainHeader>
       <Logo />
       <NavigationMenu />
     </StyledMainHeader>
@@ -15,9 +25,3 @@ const MainHeader: FC<IMainHeaderProps> = ({ ...rest }) => {
 };
 
 export default MainHeader;
-
-const StyledMainHeader = styled(Toolbar)(() => ({
-  padding: '0 !important',
-  display: 'flex',
-  justifyContent: 'space-between'
-}));

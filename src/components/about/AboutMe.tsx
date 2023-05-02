@@ -1,16 +1,12 @@
 import { FC } from 'react';
-import { Typography, TypographyProps, styled } from '@mui/material';
+import { Typography, styled } from '@mui/material';
 
-interface IAboutMeProps {}
+const StyledAboutMe = styled(Typography)(() => ({
+  alignSelf: 'flex-end'
+}));
 
-interface IStyledAboutMeProps extends TypographyProps {}
-
-const AboutMe: FC<IAboutMeProps> = ({}) => {
+const AboutMe: FC = () => {
   return <StyledAboutMe variant="h4">About Me</StyledAboutMe>;
 };
 
 export default AboutMe;
-
-const StyledAboutMe = styled(Typography)<IStyledAboutMeProps>(({}) => ({
-  alignSelf: 'flex-end'
-}));

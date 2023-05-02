@@ -44,6 +44,16 @@
     "import/no-extraneous-dependencies": "off",
     "no-console": "warn",
     "import/order": ["error", { "newlines-between": "always" }],
-    "import/named": "off"
-  }
+    "import/named": "off",
+    "import/no-unresolved": "off",
+    "@typescript-eslint/no-shadow": "off"
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "@typescript-eslint/explicit-module-boundary-types": "off"
+      }
+    }
+  ]
 }

@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import { Box, Typography, styled } from '@mui/material';
 
-interface FrontendDeveloperInfoProps {}
+const StyledFrontendDeveloperInfo = styled(Box)(() => ({}));
 
-const FrontendDeveloperInfo: FC<FrontendDeveloperInfoProps> = ({}) => {
+const FrontendDeveloperInfo: FC = () => {
   return (
     <StyledFrontendDeveloperInfo>
       <Typography component="h3" variant="h5">
@@ -18,5 +18,3 @@ const FrontendDeveloperInfo: FC<FrontendDeveloperInfoProps> = ({}) => {
 };
 
 export default FrontendDeveloperInfo;
-
-const StyledFrontendDeveloperInfo = styled(Box)(({ theme }) => ({}));
