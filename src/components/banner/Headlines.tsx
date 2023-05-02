@@ -1,11 +1,22 @@
 import { FC } from 'react';
-import { Box, Typography, styled } from '@mui/material';
-import ProfileName from './ProfileName';
-import FrontendDeveloperInfo from './FrontendDeveloperInfo';
+import { Box, styled } from '@mui/material';
+import dynamic from 'next/dynamic';
 
-interface HeadlinesProps {}
+const ProfileName = dynamic(() => import('../profile/ProfileName'), {
+  loading: () => <p>Loading...</p>
+});
 
-const Headlines: FC<HeadlinesProps> = ({}) => {
+const FrontendDeveloperInfo = dynamic(() => import('./FrontendDeveloperInfo'), {
+  loading: () => <p>Loading...</p>
+});
+
+const StyledHeadlines = styled(Box)(() => ({
+  display: 'grid',
+  justifyItems: 'flex-start',
+  alignItems: 'center'
+}));
+
+const Headlines: FC = () => {
   return (
     <StyledHeadlines>
       <ProfileName />
@@ -15,9 +26,3 @@ const Headlines: FC<HeadlinesProps> = ({}) => {
 };
 
 export default Headlines;
-
-const StyledHeadlines = styled(Box)(({ theme }) => ({
-  display: 'grid',
-  justifyItems: 'flex-start',
-  alignItems: 'center'
-}));

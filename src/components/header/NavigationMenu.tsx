@@ -1,21 +1,25 @@
 import { FC } from 'react';
 import { Box, styled } from '@mui/material';
-import MenuList from './MenuList';
-import MobileMenuList from './MobileMenuList';
+import dynamic from 'next/dynamic';
 
-interface NavigationMenuProps {}
+const MenuList = dynamic(() => import('./MenuList'), {
+  loading: () => <p>Loading...</p>
+});
+const MobileMenuList = dynamic(() => import('./MobileMenuList'), {
+  loading: () => <p>Loading...</p>
+});
 
-const NavigationMenu: FC<NavigationMenuProps> = ({}) => {
+const StyledNavigationMenu = styled(Box)(() => ({
+  color: '#f5f5f5'
+}));
+
+const NavigationMenu: FC = () => {
   return (
     <StyledNavigationMenu>
-      <MenuList sx={{ display: { xs: 'none', md: 'flex' } }} />
+      <MenuList />
       <MobileMenuList />
     </StyledNavigationMenu>
   );
 };
 
 export default NavigationMenu;
-
-const StyledNavigationMenu = styled(Box)(() => ({
-  color: '#f5f5f5'
-}));

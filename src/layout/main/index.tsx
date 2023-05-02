@@ -5,6 +5,8 @@ interface MainLayoutProps {
   children: ReactNode;
 }
 
+const StyledMainLayout = styled(Box)(() => ({}));
+
 const MainLayout: FC<MainLayoutProps> = ({ children }) => {
   return (
     <StyledMainLayout>
@@ -14,5 +16,3 @@ const MainLayout: FC<MainLayoutProps> = ({ children }) => {
 };
 
 export default MainLayout;
-
-const StyledMainLayout = styled(Box)(() => ({}));

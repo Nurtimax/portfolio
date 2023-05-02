@@ -1,23 +1,13 @@
 import { FC } from 'react';
 import { Box, Button, styled } from '@mui/material';
-import Headlines from './Headlines';
-import SocialMediaIcons from './SocialMediaIcons';
+import dynamic from 'next/dynamic';
 
-interface ContactPanelProps {}
-
-const ContactPanel: FC<ContactPanelProps> = ({}) => {
-  return (
-    <StyledContactPanel>
-      <Headlines />
-      <StyledButton variant="contained" color="error">
-        Let's talk
-      </StyledButton>
-      <SocialMediaIcons />
-    </StyledContactPanel>
-  );
-};
-
-export default ContactPanel;
+const Headlines = dynamic(() => import('./Headlines'), {
+  loading: () => <p>Loading...</p>
+});
+const SocialMediaIcons = dynamic(() => import('./SocialMediaIcons'), {
+  loading: () => <p>Loading...</p>
+});
 
 const StyledContactPanel = styled(Box)(({ theme }) => ({
   height: '100%',
@@ -31,3 +21,17 @@ const StyledButton = styled(Button)(() => ({
   justifySelf: 'flex-start',
   alignSelf: 'center'
 }));
+
+const ContactPanel: FC = () => {
+  return (
+    <StyledContactPanel>
+      <Headlines />
+      <StyledButton variant="contained" color="error">
+        Let's talk
+      </StyledButton>
+      <SocialMediaIcons />
+    </StyledContactPanel>
+  );
+};
+
+export default ContactPanel;

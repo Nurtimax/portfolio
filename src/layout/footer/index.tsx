@@ -1,9 +1,9 @@
 import { FC } from 'react';
-import { Box, Container, Typography, styled } from '@mui/material';
+import { Box, Container, styled } from '@mui/material';
 
-interface IFooterProps {}
+const StyledFooter = styled(Box)(() => ({}));
 
-const Footer: FC<IFooterProps> = ({}) => {
+const Footer: FC = () => {
   return (
     <StyledFooter>
       <Container>Footer</Container>
@@ -12,5 +12,3 @@ const Footer: FC<IFooterProps> = ({}) => {
 };
 
 export default Footer;
-
-const StyledFooter = styled(Box)(() => ({}));

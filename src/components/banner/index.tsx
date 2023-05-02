@@ -1,11 +1,20 @@
 import { FC } from 'react';
-import { Box, Grid, styled } from '@mui/material';
-import ContactPanel from './ContactPanel';
-import ProfilePicture from './ProfilePicture';
+import { Grid, styled } from '@mui/material';
+import dynamic from 'next/dynamic';
 
-interface IBannerProps {}
+const ProfilePicture = dynamic(() => import('../profile/ProfilePicture'), {
+  loading: () => <p>Loading...</p>
+});
+const ContactPanel = dynamic(() => import('./ContactPanel'), {
+  loading: () => <p>Loading...</p>
+});
 
-const MainBanner: FC<IBannerProps> = ({}) => {
+const StyledMainBanner = styled(Grid)(() => ({
+  height: '80vh',
+  width: '100%'
+}));
+
+const MainBanner: FC = () => {
   return (
     <StyledMainBanner container>
       <Grid item md={6} xs={12}>
@@ -19,8 +28,3 @@ const MainBanner: FC<IBannerProps> = ({}) => {
 };
 
 export default MainBanner;
-
-const StyledMainBanner = styled(Grid)(() => ({
-  height: '80vh',
-  width: '100%'
-}));

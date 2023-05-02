@@ -1,11 +1,14 @@
 import { FC } from 'react';
 import { Box, styled } from '@mui/material';
-import { MainContact } from '@/components';
 import { Element } from 'react-scroll';
 
-interface IContactProps {}
+import { MainContact } from '@/components';
 
-const Contact: FC<IContactProps> = ({}) => {
+const StyledContact = styled(Box)(() => ({
+  height: '80vh'
+}));
+
+const Contact: FC = () => {
   return (
     <StyledContact>
       <Element name="contact" id="contact">
@@ -16,7 +19,3 @@ const Contact: FC<IContactProps> = ({}) => {
 };
 
 export default Contact;
-
-const StyledContact = styled(Box)(() => ({
-  height: '80vh'
-}));

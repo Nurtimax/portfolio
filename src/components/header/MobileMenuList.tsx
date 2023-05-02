@@ -1,18 +1,19 @@
-import { FC, useState } from 'react';
-import { Box, BoxProps, IconButton, Menu, MenuItem, styled } from '@mui/material';
+import { FC, MouseEvent, useState } from 'react';
+import { Box, IconButton, Menu, MenuItem, styled } from '@mui/material';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+
 import { MENULISTS } from '@/utils/constants/menu-list';
 import { scrollToElement } from '@/utils/generals';
 
-interface MobileMenuListProps extends BoxProps {}
+const StyledMobileMenuList = styled(Box)(() => ({}));
 
-const MobileMenuList: FC<MobileMenuListProps> = ({ ...rest }) => {
+const MobileMenuList: FC = () => {
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState<null | HTMLElement>(null);
   const [selected, setSelected] = useState<number>(0);
 
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
-  const handleMobileMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
+  const handleMobileMenuOpen = (event: MouseEvent<HTMLElement>) => {
     setMobileMoreAnchorEl(event.currentTarget);
   };
 
@@ -23,12 +24,13 @@ const MobileMenuList: FC<MobileMenuListProps> = ({ ...rest }) => {
   const clickMenuItemHandler = (path: string, id: number) => {
     setSelected(id);
     scrollToElement(path);
+    handleMobileMenuClose();
   };
 
   const mobileMenuId = 'primary-search-account-menu-mobile';
 
   return (
-    <StyledMobileMenuList {...rest}>
+    <StyledMobileMenuList>
       <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
         <IconButton
           size="large"
@@ -71,5 +73,3 @@ const MobileMenuList: FC<MobileMenuListProps> = ({ ...rest }) => {
 };
 
 export default MobileMenuList;
-
-const StyledMobileMenuList = styled(Box)(() => ({}));

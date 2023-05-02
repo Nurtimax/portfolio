@@ -1,12 +1,10 @@
 import { FC } from 'react';
 import { Box, styled } from '@mui/material';
 
-interface IServicesProps {}
+const StyledServices = styled(Box)(() => ({}));
 
-const Services: FC<IServicesProps> = ({}) => {
+const Services: FC = () => {
   return <StyledServices>Services</StyledServices>;
 };
 
 export default Services;
-
-const StyledServices = styled(Box)(() => ({}));

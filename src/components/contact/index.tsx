@@ -1,12 +1,10 @@
 import { FC } from 'react';
 import { Box, styled } from '@mui/material';
 
-interface IContactProps {}
+const StyledContact = styled(Box)(() => ({}));
 
-const Contact: FC<IContactProps> = ({}) => {
+const Contact: FC = () => {
   return <StyledContact>Contact</StyledContact>;
 };
 
 export default Contact;
-
-const StyledContact = styled(Box)(() => ({}));

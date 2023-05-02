@@ -1,15 +1,14 @@
-import { FC, cloneElement } from 'react';
-import {
-  AppBar,
-  AppBarProps,
-  Container,
-  CssBaseline,
-  styled,
-  useScrollTrigger
-} from '@mui/material';
-import { MainHeader } from '@/components';
+import { FC, ReactElement, cloneElement } from 'react';
+import { AppBar, Container, styled, useScrollTrigger } from '@mui/material';
+import dynamic from 'next/dynamic';
 
-interface IHeaderProps extends AppBarProps {}
+const MainHeader = dynamic(() => import('../../components/header'), {
+  loading: () => <p>Loading...</p>
+});
+
+const StyledHeader = styled(AppBar)(({ theme }) => ({
+  background: theme.palette.primary.main
+}));
 
 interface Props {
   /**
@@ -17,7 +16,7 @@ interface Props {
    * You won't need it on your project.
    */
   window?: () => Window;
-  children: React.ReactElement;
+  children: ReactElement;
 }
 
 function ElevationScroll(props: Props) {
@@ -36,10 +35,10 @@ function ElevationScroll(props: Props) {
   });
 }
 
-const Header: FC<IHeaderProps> = ({ ...rest }) => {
+const Header: FC = () => {
   return (
     <ElevationScroll>
-      <StyledHeader {...rest}>
+      <StyledHeader>
         <Container>
           <MainHeader />
         </Container>
@@ -49,7 +48,3 @@ const Header: FC<IHeaderProps> = ({ ...rest }) => {
 };
 
 export default Header;
-
-const StyledHeader = styled(AppBar)(({ theme }) => ({
-  background: theme.palette.primary.main
-}));

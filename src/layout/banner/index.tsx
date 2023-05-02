@@ -1,10 +1,17 @@
 import { FC } from 'react';
 import { Box, Container, styled } from '@mui/material';
-import { MainBanner } from '@/components';
+import dynamic from 'next/dynamic';
 
-interface BannerProps {}
+const MainBanner = dynamic(() => import('../../components/banner'), {
+  loading: () => <p>Loading...</p>
+});
 
-const Banner: FC<BannerProps> = ({}) => {
+const StyledBanner = styled(Box)(() => ({
+  background: '#292929',
+  width: '100%'
+}));
+
+const Banner: FC = () => {
   return (
     <StyledBanner>
       <Container>
@@ -15,8 +22,3 @@ const Banner: FC<BannerProps> = ({}) => {
 };
 
 export default Banner;
-
-const StyledBanner = styled(Box)(() => ({
-  background: '#292929',
-  width: '100%'
-}));

@@ -1,30 +1,20 @@
-import { FC, ReactNode, cloneElement } from 'react';
-import { Box, CssBaseline, Toolbar, styled, useScrollTrigger } from '@mui/material';
-import Header from './header';
-import Footer from './footer';
-import MainLayout from './main';
-import Banner from './banner';
-import { Element } from 'react-scroll';
+import { FC, ReactNode } from 'react';
+import { Box, styled } from '@mui/material';
+import dynamic from 'next/dynamic';
+
+const Footer = dynamic(() => import('./footer'), {
+  loading: () => <p>Loading...</p>
+});
+const MainLayout = dynamic(() => import('./main'), {
+  loading: () => <p>Loading...</p>
+});
+const LayoutHead = dynamic(() => import('./LayoutHead'), {
+  loading: () => <p>Loading...</p>
+});
 
 interface ILayoutProps {
   children: ReactNode;
 }
-
-const Layout: FC<ILayoutProps> = ({ children }) => {
-  return (
-    <StyledLayout>
-      <CssBaseline />
-      <Element name="/" id="/" />
-      <Header />
-      <Toolbar />
-      <Banner />
-      <MainLayout>{children}</MainLayout>
-      <Footer />
-    </StyledLayout>
-  );
-};
-
-export default Layout;
 
 const StyledLayout = styled(Box)(({ theme }) => ({
   color: 'white',
@@ -33,3 +23,15 @@ const StyledLayout = styled(Box)(({ theme }) => ({
     width: '110%'
   }
 }));
+
+const Layout: FC<ILayoutProps> = ({ children }) => {
+  return (
+    <StyledLayout>
+      <LayoutHead />
+      <MainLayout>{children}</MainLayout>
+      <Footer />
+    </StyledLayout>
+  );
+};
+
+export default Layout;

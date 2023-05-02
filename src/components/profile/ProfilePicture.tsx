@@ -1,22 +1,13 @@
 import { FC } from 'react';
 import { Box, styled } from '@mui/material';
-import { MyPhoto } from '@/assets';
 import Image from 'next/image';
-import { Card } from '../UI';
+import dynamic from 'next/dynamic';
 
-interface ProfilePictureProps {}
+const Card = dynamic(() => import('../UI/card'), {
+  loading: () => <p>Loading...</p>
+});
 
-const ProfilePicture: FC<ProfilePictureProps> = ({}) => {
-  return (
-    <StyledProfilePicture>
-      <StyledCard>
-        <StyledImage src={MyPhoto.src} alt="nurtilek" width="100" height="100" />
-      </StyledCard>
-    </StyledProfilePicture>
-  );
-};
-
-export default ProfilePicture;
+import { MyPhoto } from '@/assets';
 
 const StyledProfilePicture = styled(Box)(({ theme }) => ({
   width: '100%',
@@ -43,3 +34,15 @@ const StyledCard = styled(Card)(({ theme }) => ({
     height: '40%'
   }
 }));
+
+const ProfilePicture: FC = () => {
+  return (
+    <StyledProfilePicture>
+      <StyledCard>
+        <StyledImage src={MyPhoto.src} alt="nurtilek" width="100" height="100" />
+      </StyledCard>
+    </StyledProfilePicture>
+  );
+};
+
+export default ProfilePicture;

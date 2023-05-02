@@ -11,6 +11,7 @@ import {
   persistStore
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
+
 import rootReducer, { AppState } from './reducers';
 
 const persistConfig: PersistConfig<AppState> = {
