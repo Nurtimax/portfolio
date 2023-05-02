@@ -23,6 +23,7 @@ const MobileMenuList: FC<MobileMenuListProps> = ({ ...rest }) => {
   const clickMenuItemHandler = (path: string, id: number) => {
     setSelected(id);
     scrollToElement(path);
+    handleMobileMenuClose();
   };
 
   const mobileMenuId = 'primary-search-account-menu-mobile';

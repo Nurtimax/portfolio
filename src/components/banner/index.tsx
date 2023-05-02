@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Box, Grid, styled } from '@mui/material';
 import ContactPanel from './ContactPanel';
-import ProfilePicture from './ProfilePicture';
+import ProfilePicture from '../profile/ProfilePicture';
 
 interface IBannerProps {}
 

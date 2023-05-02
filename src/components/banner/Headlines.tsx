@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { Box, Typography, styled } from '@mui/material';
-import ProfileName from './ProfileName';
+import ProfileName from '../profile/ProfileName';
 import FrontendDeveloperInfo from './FrontendDeveloperInfo';
 
 interface HeadlinesProps {}

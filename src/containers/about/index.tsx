@@ -8,9 +8,8 @@ interface IAboutProps {}
 const About: FC<IAboutProps> = ({}) => {
   return (
     <StyledAbout>
-      <Element name="about" id='about'>
-        <MainAbout />
-      </Element>
+      <Element name="about" id="about" />
+      <MainAbout />
     </StyledAbout>
   );
 };
@@ -18,5 +17,5 @@ const About: FC<IAboutProps> = ({}) => {
 export default About;
 
 const StyledAbout = styled(Box)(() => ({
-  height: '80vh'
+  padding: '2rem 0'
 }));
