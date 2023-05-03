@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Grid, styled } from '@mui/material';
 
-import ProfilePicture from '../profile/ProfilePicture';
+import ProfilePicture from '../../profile/ProfilePicture';
 
 const StyledProfilePictureGridItem = styled(Grid)(() => ({
   display: 'flex',
