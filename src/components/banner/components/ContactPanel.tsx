@@ -1,16 +1,17 @@
 import { FC } from 'react';
-import { Box, Button, styled } from '@mui/material';
+import { Button, Grid, styled } from '@mui/material';
 import dynamic from 'next/dynamic';
 
+import Loading from '@/components/loading';
+
 const Headlines = dynamic(() => import('./Headlines'), {
-  loading: () => <p>Loading...</p>
+  loading: () => <Loading />
 });
 const SocialMediaIcons = dynamic(() => import('./SocialMediaIcons'), {
-  loading: () => <p>Loading...</p>
+  loading: () => <Loading />
 });
 
-const StyledContactPanel = styled(Box)(({ theme }) => ({
-  height: '100%',
+const StyledContactPanel = styled(Grid)(({ theme }) => ({
   [theme.breakpoints.up('md')]: {
     display: 'grid',
     gridTemplateRows: '1fr .3fr 1fr'
@@ -24,7 +25,7 @@ const StyledButton = styled(Button)(() => ({
 
 const ContactPanel: FC = () => {
   return (
-    <StyledContactPanel>
+    <StyledContactPanel item md={6} xs={12}>
       <Headlines />
       <StyledButton variant="contained" color="error">
         Let's talk

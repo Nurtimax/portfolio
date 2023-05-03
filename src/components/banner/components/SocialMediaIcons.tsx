@@ -2,11 +2,12 @@ import { FC } from 'react';
 import { Box, styled } from '@mui/material';
 import dynamic from 'next/dynamic';
 
-const Card = dynamic(() => import('../UI/card'), {
-  loading: () => <p>Loading...</p>
-});
-
 import { SOCIALMEDIA } from '@/utils/constants/social-media';
+import Loading from '@/components/loading';
+
+const Card = dynamic(() => import('../../UI/card'), {
+  loading: () => <Loading />
+});
 
 const StyledSocialMediaIcons = styled(Box)(() => ({
   display: 'flex',

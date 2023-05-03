@@ -1,17 +1,16 @@
 import { FC } from 'react';
 import { Grid, styled } from '@mui/material';
 
-import ProfilePictureGridItem from './ProfilePictureGridItem';
-import AboutHeadlines from './AboutHeadlines';
+import ProfilePicture from '../profile/ProfilePicture';
 
-const StyledMainAbout = styled(Grid)(() => ({
-  height: '100%'
-}));
+import AboutHeadlines from './components/AboutHeadlines';
+
+const StyledMainAbout = styled(Grid)(() => ({}));
 
 const MainAbout: FC = () => {
   return (
     <StyledMainAbout container>
-      <ProfilePictureGridItem />
+      <ProfilePicture />
       <AboutHeadlines />
     </StyledMainAbout>
   );
