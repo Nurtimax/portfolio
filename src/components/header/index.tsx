@@ -2,11 +2,13 @@ import { FC } from 'react';
 import { Toolbar, styled } from '@mui/material';
 import dynamic from 'next/dynamic';
 
+import Loading from '../loading';
+
 const Logo = dynamic(() => import('../logo'), {
-  loading: () => <p>Loading...</p>
+  loading: () => <Loading />
 });
-const NavigationMenu = dynamic(() => import('./NavigationMenu'), {
-  loading: () => <p>Loading...</p>
+const NavigationMenu = dynamic(() => import('./components/NavigationMenu'), {
+  loading: () => <Loading />
 });
 
 const StyledMainHeader = styled(Toolbar)(() => ({

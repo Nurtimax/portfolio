@@ -2,8 +2,10 @@ import { FC, ReactElement, cloneElement } from 'react';
 import { AppBar, Container, styled, useScrollTrigger } from '@mui/material';
 import dynamic from 'next/dynamic';
 
+import Loading from '@/components/loading';
+
 const MainHeader = dynamic(() => import('../../components/header'), {
-  loading: () => <p>Loading...</p>
+  loading: () => <Loading />
 });
 
 const StyledHeader = styled(AppBar)(({ theme }) => ({

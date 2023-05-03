@@ -1,19 +1,12 @@
 import { FC } from 'react';
-import { Box, styled } from '@mui/material';
+import { Grid, styled } from '@mui/material';
 import Image from 'next/image';
-import dynamic from 'next/dynamic';
 
-const Card = dynamic(() => import('../UI/card'), {
-  loading: () => <p>Loading...</p>
-});
+import { Card } from '../UI';
 
 import { MyPhoto } from '@/assets';
 
-const StyledProfilePicture = styled(Box)(({ theme }) => ({
-  width: '100%',
-  [theme.breakpoints.up('md')]: {
-    height: '100%'
-  },
+const StyledProfilePicture = styled(Grid)(() => ({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center'
@@ -30,14 +23,14 @@ const StyledCard = styled(Card)(({ theme }) => ({
   height: '60%',
   background: '#eaf6fe',
   [theme.breakpoints.down('md')]: {
-    width: '45%',
-    height: '40%'
+    width: '60%',
+    height: '85%'
   }
 }));
 
 const ProfilePicture: FC = () => {
   return (
-    <StyledProfilePicture>
+    <StyledProfilePicture item md={6} xs={12}>
       <StyledCard>
         <StyledImage src={MyPhoto.src} alt="nurtilek" width="100" height="100" />
       </StyledCard>

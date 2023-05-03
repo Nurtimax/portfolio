@@ -2,8 +2,10 @@ import { FC } from 'react';
 import { Box, Container, styled } from '@mui/material';
 import dynamic from 'next/dynamic';
 
+import Loading from '@/components/loading';
+
 const MainBanner = dynamic(() => import('../../components/banner'), {
-  loading: () => <p>Loading...</p>
+  loading: () => <Loading />
 });
 
 const StyledBanner = styled(Box)(() => ({

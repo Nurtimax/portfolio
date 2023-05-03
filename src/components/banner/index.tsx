@@ -2,11 +2,13 @@ import { FC } from 'react';
 import { Grid, styled } from '@mui/material';
 import dynamic from 'next/dynamic';
 
+import Loading from '../loading';
+
 const ProfilePicture = dynamic(() => import('../profile/ProfilePicture'), {
-  loading: () => <p>Loading...</p>
+  loading: () => <Loading />
 });
-const ContactPanel = dynamic(() => import('./ContactPanel'), {
-  loading: () => <p>Loading...</p>
+const ContactPanel = dynamic(() => import('./components/ContactPanel'), {
+  loading: () => <Loading />
 });
 
 const StyledMainBanner = styled(Grid)(() => ({
@@ -17,12 +19,8 @@ const StyledMainBanner = styled(Grid)(() => ({
 const MainBanner: FC = () => {
   return (
     <StyledMainBanner container>
-      <Grid item md={6} xs={12}>
-        <ContactPanel />
-      </Grid>
-      <Grid item md={6} xs={12}>
-        <ProfilePicture />
-      </Grid>
+      <ContactPanel />
+      <ProfilePicture />
     </StyledMainBanner>
   );
 };

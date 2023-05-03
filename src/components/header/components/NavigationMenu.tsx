@@ -2,11 +2,13 @@ import { FC } from 'react';
 import { Box, styled } from '@mui/material';
 import dynamic from 'next/dynamic';
 
+import Loading from '@/components/loading';
+
 const MenuList = dynamic(() => import('./MenuList'), {
-  loading: () => <p>Loading...</p>
+  loading: () => <Loading />
 });
 const MobileMenuList = dynamic(() => import('./MobileMenuList'), {
-  loading: () => <p>Loading...</p>
+  loading: () => <Loading />
 });
 
 const StyledNavigationMenu = styled(Box)(() => ({

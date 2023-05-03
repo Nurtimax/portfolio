@@ -13,7 +13,7 @@ const findSkillsAndChangeToReactElement = (
     if (findElement.some((el) => el === item)) {
       count = count + 1;
       return (
-        <HTMLElement>
+        <HTMLElement key={item}>
           {' '}
           {item}
           {count !== findElement.length - 1 ? ', ' : ''}

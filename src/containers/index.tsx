@@ -1,19 +1,21 @@
 import dynamic from 'next/dynamic';
 
+import Loading from '@/components/loading';
+
 //
 
 export const About = dynamic(() => import('./about'), {
-  loading: () => <p>Loading...</p>
+  loading: () => <Loading />
 });
 export const Providers = dynamic(() => import('./providers'), {
-  loading: () => <p>Loading...</p>
+  loading: () => <Loading />
 });
 export const Services = dynamic(() => import('./services'), {
-  loading: () => <p>Loading...</p>
+  loading: () => <Loading />
 });
 export const Projects = dynamic(() => import('./projects'), {
-  loading: () => <p>Loading...</p>
+  loading: () => <Loading />
 });
 export const Contact = dynamic(() => import('./contact'), {
-  loading: () => <p>Loading...</p>
+  loading: () => <Loading />
 });
