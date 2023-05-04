@@ -1,8 +1,9 @@
 import { FC } from 'react';
-import { Box, styled } from '@mui/material';
+import { Box, Container, styled } from '@mui/material';
 import { Element } from 'react-scroll';
 
 import { MainServices } from '@/components';
+import { PAGES } from '@/utils/constants/pages';
 
 const StyledServices = styled(Box)(() => ({
   height: '80vh'
@@ -11,9 +12,10 @@ const StyledServices = styled(Box)(() => ({
 const Services: FC = () => {
   return (
     <StyledServices>
-      <Element name="services" id="services">
+      <Element name={PAGES.SERVICES} id={PAGES.SERVICES} />
+      <Container>
         <MainServices />
-      </Element>
+      </Container>
     </StyledServices>
   );
 };

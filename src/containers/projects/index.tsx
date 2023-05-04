@@ -1,19 +1,22 @@
 import { FC } from 'react';
-import { Box, styled } from '@mui/material';
+import { Box, Container, styled } from '@mui/material';
 import { Element } from 'react-scroll';
 
 import { MainPorjects } from '@/components';
+import { PAGES } from '@/utils/constants/pages';
 
 const StyledProjects = styled(Box)(() => ({
-  height: '80vh'
+  height: '80vh',
+  background: '#292929'
 }));
 
 const Projects: FC = () => {
   return (
     <StyledProjects>
-      <Element name="projects" id="projects">
+      <Element name={PAGES.PROJECTS} id={PAGES.PROJECTS} />
+      <Container>
         <MainPorjects />
-      </Element>
+      </Container>
     </StyledProjects>
   );
 };

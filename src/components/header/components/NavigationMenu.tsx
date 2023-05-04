@@ -7,7 +7,7 @@ import Loading from '@/components/loading';
 const MenuList = dynamic(() => import('./MenuList'), {
   loading: () => <Loading />
 });
-const MobileMenuList = dynamic(() => import('./MobileMenuList'), {
+const MobileMenuList = dynamic(() => import('./mobile-menu-list'), {
   loading: () => <Loading />
 });
 

@@ -12,7 +12,7 @@ const ContactPanel = dynamic(() => import('./components/ContactPanel'), {
 });
 
 const StyledMainBanner = styled(Grid)(() => ({
-  height: '80vh',
+  height: '85vh',
   width: '100%'
 }));
 
