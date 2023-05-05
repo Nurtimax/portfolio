@@ -16,12 +16,14 @@ const StyledMySkills = styled(Box)(() => ({
 
 const MySkills: FC<IMySkillsProps> = () => {
   return (
-    <StyledMySkills>
-      <Container>
-        <Element name={PAGES.MY_SKILLS} id={PAGES.MY_SKILLS} />
-        <MainMySkills />
-      </Container>
-    </StyledMySkills>
+    <>
+      <Element name={PAGES.MY_SKILLS} id={PAGES.MY_SKILLS} />
+      <StyledMySkills>
+        <Container>
+          <MainMySkills />
+        </Container>
+      </StyledMySkills>
+    </>
   );
 };
 
