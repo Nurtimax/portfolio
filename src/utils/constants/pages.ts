@@ -3,5 +3,6 @@ export const PAGES = {
   ABOUT: 'about',
   SERVICES: 'services',
   PROJECTS: 'projects',
-  CONTACT: 'contact'
+  CONTACT: 'contact',
+  MY_SKILLS: 'my-skills'
 };

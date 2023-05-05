@@ -1,8 +1,9 @@
 import { FC } from 'react';
-import { Box, styled } from '@mui/material';
+import { Box, Container, styled } from '@mui/material';
 import { Element } from 'react-scroll';
 
 import { MainContact } from '@/components';
+import { PAGES } from '@/utils/constants/pages';
 
 const StyledContact = styled(Box)(() => ({
   height: '80vh'
@@ -11,9 +12,10 @@ const StyledContact = styled(Box)(() => ({
 const Contact: FC = () => {
   return (
     <StyledContact>
-      <Element name="contact" id="contact">
+      <Element name={PAGES.CONTACT} id={PAGES.CONTACT} />
+      <Container>
         <MainContact />
-      </Element>
+      </Container>
     </StyledContact>
   );
 };

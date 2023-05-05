@@ -124,6 +124,30 @@ const ThemeProvider: FC<ThemeProviderProps> = ({ children }) => {
                 fontSize: '16px'
               }
             })
+          },
+          {
+            props: { variant: 'subtitle2' },
+            style: ({ theme }) => ({
+              // color: theme.palette.text.disabled,
+              [theme.breakpoints.up('md')]: {
+                fontSize: '17px'
+              },
+              [theme.breakpoints.down('sm')]: {
+                fontSize: '15px'
+              }
+            })
+          },
+          {
+            props: { variant: 'caption' },
+            style: ({ theme }) => ({
+              // color: theme.palette.text.disabled,
+              [theme.breakpoints.up('md')]: {
+                fontSize: '13px'
+              },
+              [theme.breakpoints.down('sm')]: {
+                fontSize: '10px'
+              }
+            })
           }
         ]
       },

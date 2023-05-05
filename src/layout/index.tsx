@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react';
+import { FC } from 'react';
 import { Box, styled } from '@mui/material';
 import dynamic from 'next/dynamic';
 
@@ -14,23 +14,19 @@ const LayoutHead = dynamic(() => import('./LayoutHead'), {
   loading: () => <Loading />
 });
 
-interface ILayoutProps {
-  children: ReactNode;
-}
-
-const StyledLayout = styled(Box)(() => ({
+const StyledLayout = styled(Box)(({ theme }) => ({
   color: 'white',
-  width: '100%'
-  // [theme.breakpoints.down('md')]: {
-  //   width: '110%'
-  // }
+  width: '100%',
+  [theme.breakpoints.down('md')]: {
+    width: '110%'
+  }
 }));
 
-const Layout: FC<ILayoutProps> = ({ children }) => {
+const Layout: FC = () => {
   return (
     <StyledLayout>
       <LayoutHead />
-      <MainLayout>{children}</MainLayout>
+      <MainLayout />
       <Footer />
     </StyledLayout>
   );

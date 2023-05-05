@@ -1,16 +1,18 @@
-import { FC, ReactNode } from 'react';
-import { Box, Container, styled } from '@mui/material';
+import { FC } from 'react';
+import { Box, styled } from '@mui/material';
 
-interface MainLayoutProps {
-  children: ReactNode;
-}
+import { About, Contact, MySkills, Projects, Services } from '@/containers';
 
 const StyledMainLayout = styled(Box)(() => ({}));
 
-const MainLayout: FC<MainLayoutProps> = ({ children }) => {
+const MainLayout: FC = () => {
   return (
     <StyledMainLayout>
-      <Container>{children}</Container>
+      <About />
+      <MySkills />
+      <Services />
+      <Projects />
+      <Contact />
     </StyledMainLayout>
   );
 };

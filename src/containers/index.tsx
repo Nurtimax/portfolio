@@ -19,3 +19,6 @@ export const Projects = dynamic(() => import('./projects'), {
 export const Contact = dynamic(() => import('./contact'), {
   loading: () => <Loading />
 });
+export const MySkills = dynamic(() => import('./my-skills'), {
+  loading: () => <Loading />
+});

@@ -10,7 +10,7 @@ const StyledMainAbout = styled(Grid)(() => ({}));
 const MainAbout: FC = () => {
   return (
     <StyledMainAbout container>
-      <ProfilePicture />
+      <ProfilePicture sx={{ display: { xs: 'none', md: 'flex' } }} />
       <AboutHeadlines />
     </StyledMainAbout>
   );

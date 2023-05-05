@@ -1,5 +1,5 @@
 import { FC, ReactElement, cloneElement } from 'react';
-import { AppBar, Container, styled, useScrollTrigger } from '@mui/material';
+import { AppBar, styled, useScrollTrigger } from '@mui/material';
 import dynamic from 'next/dynamic';
 
 import Loading from '@/components/loading';
@@ -41,9 +41,7 @@ const Header: FC = () => {
   return (
     <ElevationScroll>
       <StyledHeader>
-        <Container>
-          <MainHeader />
-        </Container>
+        <MainHeader />
       </StyledHeader>
     </ElevationScroll>
   );

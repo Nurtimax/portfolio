@@ -4,3 +4,4 @@ export { default as MainContact } from './contact';
 export { default as MainPorjects } from './projects';
 export { default as MainServices } from './services';
 export { default as MainBanner } from './banner';
+export { default as MainMySkills } from './my-skills';

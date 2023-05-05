@@ -3,6 +3,7 @@ import { Box, Typography, styled } from '@mui/material';
 
 const StyledLogo = styled(Box)(() => ({
   display: 'flex',
+  alignItems: 'center',
   '& .MuiTypography-root': {
     fontSize: '2rem',
     color: '#f5f5f5'

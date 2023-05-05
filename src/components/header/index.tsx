@@ -13,8 +13,10 @@ const NavigationMenu = dynamic(() => import('./components/NavigationMenu'), {
 
 const StyledMainHeader = styled(Toolbar)(() => ({
   padding: '0 !important',
-  display: 'flex',
-  justifyContent: 'space-between'
+  display: 'grid',
+  gridTemplateColumns: '1fr 2fr',
+  width: '90%',
+  margin: '0 auto'
 }));
 
 const MainHeader: FC = () => {
