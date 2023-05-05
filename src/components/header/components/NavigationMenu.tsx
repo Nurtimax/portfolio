@@ -12,7 +12,10 @@ const MobileMenuList = dynamic(() => import('./mobile-menu-list'), {
 });
 
 const StyledNavigationMenu = styled(Box)(() => ({
-  color: '#f5f5f5'
+  color: '#f5f5f5',
+  width: '100%',
+  display: 'flex',
+  justifyContent: 'flex-end'
 }));
 
 const NavigationMenu: FC = () => {

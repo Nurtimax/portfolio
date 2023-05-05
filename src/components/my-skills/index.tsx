@@ -1,14 +1,22 @@
 import { FC } from 'react';
-import { Box, styled } from '@mui/material';
+import { Grid, styled } from '@mui/material';
+
+import Headerline from './components/Headerline';
+import SkillContent from './components/SkillContent';
 
 interface IMainMySkillsProps {
   [key: string]: unknown;
 }
 
-const StyledMainMySkills = styled(Box)(() => ({}));
+const StyledMainMySkills = styled(Grid)(() => ({}));
 
 const MainMySkills: FC<IMainMySkillsProps> = () => {
-  return <StyledMainMySkills>MainMySkills</StyledMainMySkills>;
+  return (
+    <StyledMainMySkills container>
+      <Headerline />
+      <SkillContent />
+    </StyledMainMySkills>
+  );
 };
 
 export default MainMySkills;
