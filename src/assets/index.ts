@@ -25,3 +25,4 @@ export { default as Tailwind } from './icons/Tailwind';
 export { default as TypeScript } from './icons/TypeScript';
 export { default as Vercel } from './icons/Vercel';
 export { default as Webpack } from './icons/Webpack';
+export { default as Code } from './icons/Code';
