@@ -26,3 +26,8 @@ export { default as TypeScript } from './icons/TypeScript';
 export { default as Vercel } from './icons/Vercel';
 export { default as Webpack } from './icons/Webpack';
 export { default as Code } from './icons/Code';
+export { default as Bilingaul } from './images/bilingaul.jpeg';
+export { default as Financial } from './images/financial.png';
+export { default as Gadgetarium } from './images/gadgetarium.png';
+export { default as Medcheck } from './images/medcheck.png';
+export { default as Trello } from './images/trello.png';

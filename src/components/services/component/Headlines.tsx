@@ -13,7 +13,7 @@ const Headlines: FC<IHeadlinesProps> = () => {
   return (
     <StyledHeadlines>
       <Typography variant="h4">Services</Typography>
-      <Typography variant="subtitle1">What am I offer</Typography>
+      <Typography variant="subtitle1">Что я предлагаю</Typography>
     </StyledHeadlines>
   );
 };

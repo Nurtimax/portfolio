@@ -14,7 +14,7 @@ const HeadlineTitle: FC<IHeadlineTitleProps> = () => {
         My Skills
       </Typography>
       <Typography variant="subtitle1" component="h3">
-        Fully see what skills I have and perform to develop projects for you
+        Полностью увидеть, какие навыки я имею и выполнять для разработки проектов для вас
       </Typography>
     </StyledHeadlineTitle>
   );

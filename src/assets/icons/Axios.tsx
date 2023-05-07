@@ -15,7 +15,7 @@ const Axios: FC<SVGProps<SVGSVGElement>> = (props) => {
       <style type="text/css">
         {`
         .st0{fill:#5A29E4;}
-        .st1{fill-rule:evenodd;clip-rule:evenodd;fill:#5A29E4;}
+        .st1{fillRule:evenodd;clipRule:evenodd;fill:#5A29E4;}
         `}
       </style>
 

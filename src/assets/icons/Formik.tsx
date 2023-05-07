@@ -12,7 +12,7 @@ const Formik: FC<SVGProps<SVGSVGElement>> = (props) => {
       <path
         d="m-.0001948.00485276h34.699667v34.699667h-34.699667z"
         fill="#0051cd"
-        stroke-width=".1187196918"
+        strokeWidth=".1187196918"
       />
       <g fill="#fff" transform="matrix(.400018502 0 0 .400018502 5.34987738 .55385626)">
         <path d="m38.869 0 9.694 5.5746-38.176 21.954-9.694-5.5747z" />
