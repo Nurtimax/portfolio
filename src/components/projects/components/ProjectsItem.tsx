@@ -15,11 +15,14 @@ interface IProjectsItemProps extends GridProps {
   links: IProjectsLinks[];
 }
 
-const StyledProjectsItem = styled(Grid)(() => ({
+const StyledProjectsItem = styled(Grid)(({ theme }) => ({
   display: 'grid',
   gridTemplateColumns: '1fr 2fr',
   padding: '1rem 0',
-  gap: '1rem'
+  gap: '1rem',
+  [theme.breakpoints.down('sm')]: {
+    gridTemplateColumns: '1fr'
+  }
 }));
 
 const ProjectsItem: FC<IProjectsItemProps> = ({
