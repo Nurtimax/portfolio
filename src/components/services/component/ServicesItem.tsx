@@ -11,7 +11,7 @@ const StyledServicesItem = styled(Grid)(() => ({
   border: '1px solid #cdcdcd',
   borderRadius: '3px',
   display: 'grid',
-  padding: '0 1rem',
+  padding: '1rem',
   width: '100%',
   height: '30vh',
   '&:hover': {
