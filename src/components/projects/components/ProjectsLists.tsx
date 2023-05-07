@@ -13,9 +13,9 @@ const StyledProjectsLists = styled(Grid)(() => ({}));
 
 const ProjectsLists: FC<IProjectsListsProps> = () => {
   return (
-    <StyledProjectsLists>
+    <StyledProjectsLists container>
       {PROJECTS.map((project) => (
-        <ProjectsItem key={project.id} {...project} />
+        <ProjectsItem key={project.id} {...project} item />
       ))}
     </StyledProjectsLists>
   );
