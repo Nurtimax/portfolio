@@ -6,7 +6,6 @@ import { MainPorjects } from '@/components';
 import { PAGES } from '@/utils/constants/pages';
 
 const StyledProjects = styled(Box)(() => ({
-  height: '80vh',
   background: '#292929'
 }));
 

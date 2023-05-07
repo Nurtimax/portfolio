@@ -10,8 +10,9 @@ interface IServicesListProps extends GridProps {
 }
 
 const StyledServicesList = styled(Grid)(() => ({
-  height: '90%',
-  padding: '2rem 0'
+  padding: '2rem 0',
+  margin: 0,
+  width: '100%'
 }));
 
 const ServicesList: FC<IServicesListProps> = () => {

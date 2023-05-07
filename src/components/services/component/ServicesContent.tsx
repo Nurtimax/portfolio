@@ -8,9 +8,7 @@ interface IServicesContentProps {
   [key: string]: unknown;
 }
 
-const StyledServicesContent = styled(Box)(() => ({
-  height: '80vh'
-}));
+const StyledServicesContent = styled(Box)(() => ({}));
 
 const ServicesContent: FC<IServicesContentProps> = () => {
   return (

@@ -12,6 +12,8 @@ const StyledServicesItem = styled(Grid)(() => ({
   borderRadius: '3px',
   display: 'grid',
   padding: '0 1rem',
+  width: '100%',
+  height: '30vh',
   '&:hover': {
     background: '#ffffff2d'
   }
@@ -19,7 +21,7 @@ const StyledServicesItem = styled(Grid)(() => ({
 
 const ServicesItem: FC<IServicesItemProps> = ({ title, ICON, ...props }) => {
   return (
-    <StyledServicesItem item md={3.8} {...props}>
+    <StyledServicesItem item md={3.8} sm={12} {...props}>
       <ICON fontSize="5rem" style={{ justifySelf: 'center', color: 'white' }} />
       <Typography variant="subtitle1">{title}</Typography>
     </StyledServicesItem>

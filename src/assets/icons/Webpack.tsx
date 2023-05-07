@@ -14,12 +14,12 @@ const Webpack: FC<SVGProps<SVGSVGElement>> = (props) => {
       <title>build-tools/webpack</title>
       <desc>Created with Sketch.</desc>
       <defs></defs>
-      <g id="build-tools/webpack" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="container" transform="translate(2.000000, 2.000000)" fill-rule="nonzero">
+      <g id="build-tools/webpack" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+        <g id="container" transform="translate(2.000000, 2.000000)" fillRule="nonzero">
           <rect
             id="mask"
             stroke="#1C78C0"
-            stroke-width="2"
+            strokeWidth="2"
             fill="#FFFFFF"
             x="-1"
             y="-1"
