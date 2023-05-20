@@ -4,9 +4,6 @@ import dynamic from 'next/dynamic';
 
 import Loading from '@/components/loading';
 
-const Footer = dynamic(() => import('./footer'), {
-  loading: () => <Loading />
-});
 const MainLayout = dynamic(() => import('./main'), {
   loading: () => <Loading />
 });
@@ -27,7 +24,6 @@ const Layout: FC = () => {
     <StyledLayout>
       <LayoutHead />
       <MainLayout />
-      <Footer />
     </StyledLayout>
   );
 };
