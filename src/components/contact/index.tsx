@@ -1,16 +1,18 @@
 import { FC } from 'react';
 import { Box, styled } from '@mui/material';
 
-import Headlines from './components/Headlines';
-import FormContent from './components/FormContent';
+import MainContactContent from './components/MainContactContent';
 
-const StyledContact = styled(Box)(() => ({}));
+const StyledContact = styled(Box)(() => ({
+  padding: '1rem 0',
+
+  height: '80vh'
+}));
 
 const Contact: FC = () => {
   return (
     <StyledContact>
-      <Headlines />
-      <FormContent />
+      <MainContactContent />
     </StyledContact>
   );
 };

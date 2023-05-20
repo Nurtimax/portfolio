@@ -5,9 +5,7 @@ import { Element } from 'react-scroll';
 import { MainContact } from '@/components';
 import { PAGES } from '@/utils/constants/pages';
 
-const StyledContact = styled(Box)(() => ({
-  height: '80vh'
-}));
+const StyledContact = styled(Box)(() => ({}));
 
 const Contact: FC = () => {
   return (
