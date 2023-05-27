@@ -3,11 +3,12 @@ import { Box, styled } from '@mui/material';
 import dynamic from 'next/dynamic';
 
 import Loading from '@/components/loading';
+import { MENULISTS } from '@/utils/constants/menu-list';
 
 const MenuList = dynamic(() => import('./MenuList'), {
   loading: () => <Loading />
 });
-const MobileMenuList = dynamic(() => import('./mobile-menu-list'), {
+const MobileMenuList = dynamic(() => import('../../menu-list'), {
   loading: () => <Loading />
 });
 
@@ -22,7 +23,7 @@ const NavigationMenu: FC = () => {
   return (
     <StyledNavigationMenu>
       <MenuList />
-      <MobileMenuList />
+      <MobileMenuList lists={MENULISTS} isMobile />
     </StyledNavigationMenu>
   );
 };

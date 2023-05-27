@@ -42,7 +42,7 @@ const NavigateDemo: FC<INavigateDemoProps> = ({ links }) => {
   return (
     <StyledNavigateDemo>
       {links.map((link) => (
-        <Link href={link.link} className="demo__link" key={link.id}>
+        <Link href={link.link} classNameName="demo__link" key={link.id}>
           <StyledCard>
             <link.ICON />
           </StyledCard>

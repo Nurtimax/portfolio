@@ -7,7 +7,7 @@ import Loading from '@/components/loading';
 const Headlines = dynamic(() => import('./Headlines'), {
   loading: () => <Loading />
 });
-const SocialMediaIcons = dynamic(() => import('../../SocialMediaIcons'), {
+const SocialMediaIcons = dynamic(() => import('../../social-media-icons'), {
   loading: () => <Loading />
 });
 

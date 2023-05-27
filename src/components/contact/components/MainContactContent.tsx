@@ -4,7 +4,7 @@ import { Box, styled } from '@mui/material';
 import Headlines from './Headlines';
 import FormContent from './FormContent';
 
-import SocialMediaIcons from '@/components/SocialMediaIcons';
+import SocialMediaIcons from '@/components/social-media-icons';
 
 interface IMainContactContentProps {
   [key: string]: unknown;

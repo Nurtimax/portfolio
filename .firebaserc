@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "nurtimax-255f3"
-  }
+    "default": "portfolio-8ed46",
+    "y": "portfolio-8ed46"
+  },
+  "targets": {},
+  "etags": {}
 }

@@ -18,7 +18,7 @@ const StyledLogo = styled(Box)(() => ({
 const Logo: FC = () => {
   return (
     <StyledLogo>
-      <Typography component="span" className="first_slice">
+      <Typography component="span" classNameName="first_slice">
         N
       </Typography>
       <Typography component="span">urtimax</Typography>
