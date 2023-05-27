@@ -31,3 +31,4 @@ export { default as Financial } from './images/financial.png';
 export { default as Gadgetarium } from './images/gadgetarium.png';
 export { default as Medcheck } from './images/medcheck.png';
 export { default as Trello } from './images/trello.png';
+export { default as Loading } from './icons/Loading';

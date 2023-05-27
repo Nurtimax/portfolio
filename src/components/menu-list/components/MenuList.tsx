@@ -4,10 +4,12 @@ import { MenuList as ChakraMenuList } from '@chakra-ui/react';
 
 import MenuItem from './MenuItem';
 
-import { MENULISTS } from '@/utils/constants/menu-list';
+import { IMenuLists } from '@/types/header-list';
 
 interface IMenuListProps {
   children?: ReactNode;
+  lists: IMenuLists[];
+  isLink?: boolean;
 }
 
 const StyledMenuList = styled(Box)(() => ({}));
@@ -15,7 +17,7 @@ const StyledMenuList = styled(Box)(() => ({}));
 const StyledCakraMenuList = styled(ChakraMenuList)(({ theme }) => ({
   background: '#201f1f',
   padding: '.5rem',
-  width: '30vw',
+  width: '15vw',
   borderRadius: '3px',
   display: 'grid',
   gap: '3px',
@@ -24,7 +26,7 @@ const StyledCakraMenuList = styled(ChakraMenuList)(({ theme }) => ({
   }
 }));
 
-const MenuList: FC<IMenuListProps> = () => {
+const MenuList: FC<IMenuListProps> = ({ lists, isLink }) => {
   const [selectedItem, setSelectedItem] = useState<string>('/');
 
   const changeSelectedItemHandler = (item: string) => {
@@ -34,12 +36,13 @@ const MenuList: FC<IMenuListProps> = () => {
   return (
     <StyledMenuList>
       <StyledCakraMenuList>
-        {MENULISTS.map(({ id, children, path }) => (
+        {lists.map(({ id, children, path }) => (
           <MenuItem
             to={path}
             key={id}
             selectedItem={selectedItem}
             setSelectedItem={changeSelectedItemHandler}
+            isLink={isLink}
           >
             {children}
           </MenuItem>

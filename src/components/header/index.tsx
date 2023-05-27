@@ -4,6 +4,8 @@ import dynamic from 'next/dynamic';
 
 import Loading from '../loading';
 
+import ProfileStatus from './components/ProfileStatus';
+
 const Logo = dynamic(() => import('../logo'), {
   loading: () => <Loading />
 });
@@ -14,9 +16,10 @@ const NavigationMenu = dynamic(() => import('./components/NavigationMenu'), {
 const StyledMainHeader = styled(Toolbar)(() => ({
   padding: '0 !important',
   display: 'grid',
-  gridTemplateColumns: '1fr 2fr',
+  gridTemplateColumns: '1fr 1.9fr .1fr',
   width: '90%',
-  margin: '0 auto'
+  margin: '0 auto',
+  gap: '1rem'
 }));
 
 const MainHeader: FC = () => {
@@ -24,6 +27,7 @@ const MainHeader: FC = () => {
     <StyledMainHeader>
       <Logo />
       <NavigationMenu />
+      <ProfileStatus />
     </StyledMainHeader>
   );
 };

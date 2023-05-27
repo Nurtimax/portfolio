@@ -4,7 +4,8 @@ import { MenuButton as ChakraButton } from '@chakra-ui/react';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 interface IMenuButtonProps {
-  children?: ReactNode;
+  Button: ReactNode;
+  isMobile: boolean;
 }
 
 const StyledMenuButton = styled(Box)(() => ({}));
@@ -16,12 +17,10 @@ const StyledChakraButton = styled(ChakraButton)(() => ({
   cursor: 'pointer'
 }));
 
-const MenuButton: FC<IMenuButtonProps> = () => {
+const MenuButton: FC<IMenuButtonProps> = ({ Button, isMobile }) => {
   return (
-    <StyledMenuButton sx={{ display: { xs: 'flex', md: 'none' } }}>
-      <StyledChakraButton>
-        <MoreVertIcon />
-      </StyledChakraButton>
+    <StyledMenuButton sx={{ display: isMobile ? { xs: 'flex', md: 'none' } : {} }}>
+      <StyledChakraButton>{Button ? Button : <MoreVertIcon />}</StyledChakraButton>
     </StyledMenuButton>
   );
 };

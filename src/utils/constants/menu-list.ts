@@ -1,6 +1,8 @@
 import { PAGES } from './pages';
 
-export const MENULISTS = [
+import { IMenuLists } from '@/types/header-list';
+
+export const MENULISTS: IMenuLists[] = [
   { id: 1, children: 'Home', path: PAGES.HOME },
   { id: 2, children: 'About', path: PAGES.ABOUT },
   { id: 6, children: 'My Skills', path: PAGES.MY_SKILLS },

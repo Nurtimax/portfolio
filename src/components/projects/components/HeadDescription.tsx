@@ -19,7 +19,7 @@ const HeadDescription: FC<IHeadDescriptionProps> = ({ description }) => {
     <StyledHeadDescription>
       {description.map((item, index) => (
         <Typography variant="subtitle2" component="span" key={item}>
-          <span className="list">{String(index + 1).padStart(2, '0')}.</span> {item}
+          <span classNameName="list">{String(index + 1).padStart(2, '0')}.</span> {item}
         </Typography>
       ))}
     </StyledHeadDescription>

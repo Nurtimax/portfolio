@@ -22,3 +22,9 @@ export const Contact = dynamic(() => import('./contact'), {
 export const MySkills = dynamic(() => import('./my-skills'), {
   loading: () => <Loading />
 });
+export const SignIn = dynamic(() => import('./sign-in'), {
+  loading: () => <Loading />
+});
+export const SignUp = dynamic(() => import('./sign-up'), {
+  loading: () => <Loading />
+});

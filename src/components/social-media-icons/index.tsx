@@ -1,11 +1,15 @@
 import { FC } from 'react';
-import { Box, styled } from '@mui/material';
+import { Box, BoxProps, styled } from '@mui/material';
 import dynamic from 'next/dynamic';
 
 import { SOCIALMEDIA } from '@/utils/constants/social-media';
 import Loading from '@/components/loading';
 
-const Card = dynamic(() => import('../../UI/card'), {
+interface ISocialMediaIcons extends BoxProps {
+  [key: string]: unknown;
+}
+
+const Card = dynamic(() => import('../UI/card'), {
   loading: () => <Loading />
 });
 
@@ -21,12 +25,12 @@ const StyledCard = styled(Card)(() => ({
   cursor: 'pointer'
 }));
 
-const SocialMediaIcons: FC = () => {
+const SocialMediaIcons: FC<ISocialMediaIcons> = (props) => {
   return (
-    <StyledSocialMediaIcons>
+    <StyledSocialMediaIcons {...props}>
       {SOCIALMEDIA.map(({ SOCIALICON, id, to }) => (
         <a href={to} key={id}>
-          <StyledCard key={id}>
+          <StyledCard key={id} title={to}>
             <SOCIALICON />
           </StyledCard>
         </a>
