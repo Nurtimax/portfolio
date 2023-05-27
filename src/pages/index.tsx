@@ -1,12 +1,9 @@
-// import Layout from '@/layout';
-
-import Animated from '@/components/animated';
+import Layout from '@/layout';
 
 export default function Home() {
   return (
     <>
-      {/* <Layout /> */}
-      <Animated />
+      <Layout />
     </>
   );
 }
