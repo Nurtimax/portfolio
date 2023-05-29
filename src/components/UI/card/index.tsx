@@ -8,7 +8,8 @@ const StyledCard = styled(Box)(() => ({
   height: '100px',
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'center'
+  justifyContent: 'center',
+  cursor: 'pointer'
 }));
 
 interface ICardProps extends BoxProps {

@@ -11,7 +11,6 @@ const Github: FC<SVGProps<SVGSVGElement>> = (props) => {
       //   xmlns:xlink="http://www.w3.org/1999/xlink"
       {...props}
     >
-      <title>github [#142]</title>
       <desc>Created with Sketch.</desc>
       <defs></defs>
       <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">

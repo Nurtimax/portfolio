@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic';
 
 import Loading from '@/components/loading';
 import { PAGES } from '@/utils/constants/pages';
+import { ScrollProgress } from '@/components';
 
 const Header = dynamic(() => import('./header'), {
   loading: () => <Loading />
@@ -22,6 +23,7 @@ const LayoutHead: FC = () => {
       <Element name={PAGES.HOME} id={PAGES.HOME} />
       <Header />
       <Toolbar />
+      <ScrollProgress />
       <Banner />
     </StyledLayoutHead>
   );

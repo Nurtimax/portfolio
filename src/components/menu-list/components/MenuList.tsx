@@ -12,7 +12,11 @@ interface IMenuListProps {
   isLink?: boolean;
 }
 
-const StyledMenuList = styled(Box)(() => ({}));
+const StyledMenuList = styled(Box)(() => ({
+  '& .css-0': {
+    zIndex: 100000000
+  }
+}));
 
 const StyledCakraMenuList = styled(ChakraMenuList)(({ theme }) => ({
   background: '#201f1f',

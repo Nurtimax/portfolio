@@ -13,7 +13,7 @@ import { FC } from 'react';
 
 import { THEME_PALETTE } from '@/utils/constants/theme';
 
-interface InputProps extends InputBaseProps {
+export interface InputProps extends InputBaseProps {
   [key: string]: unknown;
   FormLableProps?: FormLabelProps;
   FormControle?: FormControlProps;

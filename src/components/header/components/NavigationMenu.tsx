@@ -16,7 +16,8 @@ const StyledNavigationMenu = styled(Box)(() => ({
   color: '#f5f5f5',
   width: '100%',
   display: 'flex',
-  justifyContent: 'flex-end'
+  justifyContent: 'flex-end',
+  alignItems: 'center'
 }));
 
 const NavigationMenu: FC = () => {

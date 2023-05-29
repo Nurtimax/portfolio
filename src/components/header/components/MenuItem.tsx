@@ -29,7 +29,7 @@ const MenuItem: FC<MenuItemProps> = ({ to, children }) => {
 
   return (
     <StyledMenuItem active={String(isActive)}>
-      <Link activeclassName="active" to={to} spy={true} smooth={true} offset={-70} duration={500}>
+      <Link activeClass="active" to={to} spy={true} smooth={true} offset={-70} duration={500}>
         {children}
       </Link>
     </StyledMenuItem>

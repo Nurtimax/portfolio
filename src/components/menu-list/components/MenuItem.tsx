@@ -18,7 +18,8 @@ const StyledMenuItem = styled(ChakraMenuItem)(() => ({
   padding: '1rem',
   border: 'none',
   borderRadius: '3px',
-  fontWeight: '400'
+  fontWeight: '400',
+  cursor: 'pointer'
 }));
 
 const MenuItem: FC<IMenuItemProps> = ({ children, to, setSelectedItem, selectedItem, isLink }) => {
@@ -26,7 +27,7 @@ const MenuItem: FC<IMenuItemProps> = ({ children, to, setSelectedItem, selectedI
     <>
       {!isLink ? (
         <ReactScrollLink
-          activeclassName="active"
+          activeClass="active"
           to={to}
           spy={true}
           smooth={true}
