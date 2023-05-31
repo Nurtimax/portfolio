@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { Box, BoxProps, styled } from '@mui/material';
 import dynamic from 'next/dynamic';
+import { motion } from 'framer-motion';
 
 import { SOCIALMEDIA } from '@/utils/constants/social-media';
 import Loading from '@/components/loading';
@@ -28,11 +29,17 @@ const StyledCard = styled(Card)(() => ({
 const SocialMediaIcons: FC<ISocialMediaIcons> = (props) => {
   return (
     <StyledSocialMediaIcons {...props}>
-      {SOCIALMEDIA.map(({ SOCIALICON, id, to }) => (
+      {SOCIALMEDIA.map(({ SOCIALICON, id, to }, index) => (
         <a href={to} key={id}>
-          <StyledCard key={id} title={to}>
-            <SOCIALICON />
-          </StyledCard>
+          <motion.div
+            initial={{ x: 100 * index }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: index * 0.3 }}
+          >
+            <StyledCard key={id} title={to}>
+              <SOCIALICON />
+            </StyledCard>
+          </motion.div>
         </a>
       ))}
     </StyledSocialMediaIcons>

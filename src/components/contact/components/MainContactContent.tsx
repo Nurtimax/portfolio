@@ -8,6 +8,7 @@ import SocialMediaIcons from '@/components/social-media-icons';
 
 interface IMainContactContentProps {
   [key: string]: unknown;
+  isWork?: boolean;
 }
 
 const StyledMainContactContent = styled(Box)(() => ({
@@ -15,11 +16,12 @@ const StyledMainContactContent = styled(Box)(() => ({
   height: '50%'
 }));
 
-const MainContactContent: FC<IMainContactContentProps> = () => {
+const MainContactContent: FC<IMainContactContentProps> = ({ isWork }) => {
   return (
     <StyledMainContactContent>
       <Headlines />
-      <FormContent />
+      {isWork ? <FormContent /> : null}
+
       <SocialMediaIcons sx={{ justifySelf: 'center' }} />
     </StyledMainContactContent>
   );

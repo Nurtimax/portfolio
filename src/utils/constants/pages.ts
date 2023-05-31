@@ -1,4 +1,4 @@
-export const PAGES = {
+export const PAGES: IPages = {
   HOME: '/',
   ABOUT: 'about',
   SERVICES: 'services',
@@ -8,3 +8,16 @@ export const PAGES = {
   SIGNIN: '/sign-in',
   SIGNUP: '/sign-up'
 };
+
+interface IPages {
+  HOME: PagesTitles;
+  ABOUT: PagesTitles;
+  SERVICES: PagesTitles;
+  PROJECTS: PagesTitles;
+  CONTACT: PagesTitles;
+  MY_SKILLS: PagesTitles;
+  SIGNIN: '/sign-in';
+  SIGNUP: '/sign-up';
+}
+
+export type PagesTitles = '/' | 'about' | 'services' | 'projects' | 'contact' | 'my-skills';

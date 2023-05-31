@@ -1,18 +1,12 @@
 import { FC } from 'react';
 import { Grid, styled } from '@mui/material';
-import dynamic from 'next/dynamic';
 
-import Loading from '../loading';
+import ProfilePicture from '../profile/ProfilePicture';
 
-const ProfilePicture = dynamic(() => import('../profile/ProfilePicture'), {
-  loading: () => <Loading />
-});
-const ContactPanel = dynamic(() => import('./components/ContactPanel'), {
-  loading: () => <Loading />
-});
+import ContactPanel from './components/ContactPanel';
 
 const StyledMainBanner = styled(Grid)(() => ({
-  height: '85vh',
+  height: '90vh',
   width: '100%'
 }));
 
