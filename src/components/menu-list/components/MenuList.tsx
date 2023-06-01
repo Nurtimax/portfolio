@@ -1,10 +1,13 @@
-import { FC, ReactNode, useState } from 'react';
+import { FC, ReactNode } from 'react';
 import { Box, styled } from '@mui/material';
 import { MenuList as ChakraMenuList } from '@chakra-ui/react';
 
 import MenuItem from './MenuItem';
 
 import { IMenuLists } from '@/types/header-list';
+import { useAppDispatch, useAppSelector } from '@/hook/react-redux';
+import { PagesTitles } from '@/utils/constants/pages';
+import { actionLandingPositionSlice } from '@/store/slices/landing-position';
 
 interface IMenuListProps {
   children?: ReactNode;
@@ -12,7 +15,11 @@ interface IMenuListProps {
   isLink?: boolean;
 }
 
-const StyledMenuList = styled(Box)(() => ({}));
+const StyledMenuList = styled(Box)(() => ({
+  '& .css-0': {
+    zIndex: 100000000
+  }
+}));
 
 const StyledCakraMenuList = styled(ChakraMenuList)(({ theme }) => ({
   background: '#201f1f',
@@ -27,10 +34,12 @@ const StyledCakraMenuList = styled(ChakraMenuList)(({ theme }) => ({
 }));
 
 const MenuList: FC<IMenuListProps> = ({ lists, isLink }) => {
-  const [selectedItem, setSelectedItem] = useState<string>('/');
+  const { position } = useAppSelector((state) => state.landingPosition.data);
 
-  const changeSelectedItemHandler = (item: string) => {
-    setSelectedItem(item);
+  const dispatch = useAppDispatch();
+
+  const changeSelectedItemHandler = (item: PagesTitles) => {
+    dispatch(actionLandingPositionSlice.changePosition(item));
   };
 
   return (
@@ -40,7 +49,7 @@ const MenuList: FC<IMenuListProps> = ({ lists, isLink }) => {
           <MenuItem
             to={path}
             key={id}
-            selectedItem={selectedItem}
+            selectedItem={position}
             setSelectedItem={changeSelectedItemHandler}
             isLink={isLink}
           >

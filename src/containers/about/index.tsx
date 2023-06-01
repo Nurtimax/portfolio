@@ -6,7 +6,8 @@ import { MainAbout } from '@/components';
 import { PAGES } from '@/utils/constants/pages';
 
 const StyledAbout = styled(Box)(() => ({
-  padding: '2rem 0'
+  padding: '2rem 0',
+  height: '100vh'
 }));
 
 const About: FC = () => {

@@ -1,15 +1,10 @@
 import { FC } from 'react';
-import { Button, Grid, styled } from '@mui/material';
-import dynamic from 'next/dynamic';
+import { Grid, styled } from '@mui/material';
 
-import Loading from '@/components/loading';
+import Headlines from './Headlines';
+import NavigateButton from './NavigateButton';
 
-const Headlines = dynamic(() => import('./Headlines'), {
-  loading: () => <Loading />
-});
-const SocialMediaIcons = dynamic(() => import('../../social-media-icons'), {
-  loading: () => <Loading />
-});
+import SocialMediaIcons from '@/components/social-media-icons';
 
 const StyledContactPanel = styled(Grid)(({ theme }) => ({
   [theme.breakpoints.up('md')]: {
@@ -18,18 +13,11 @@ const StyledContactPanel = styled(Grid)(({ theme }) => ({
   }
 }));
 
-const StyledButton = styled(Button)(() => ({
-  justifySelf: 'flex-start',
-  alignSelf: 'center'
-}));
-
 const ContactPanel: FC = () => {
   return (
     <StyledContactPanel item md={6} xs={12}>
       <Headlines />
-      <StyledButton variant="contained" color="error">
-        Let's talk
-      </StyledButton>
+      <NavigateButton />
       <SocialMediaIcons />
     </StyledContactPanel>
   );

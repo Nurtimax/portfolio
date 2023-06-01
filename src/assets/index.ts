@@ -32,3 +32,4 @@ export { default as Gadgetarium } from './images/gadgetarium.png';
 export { default as Medcheck } from './images/medcheck.png';
 export { default as Trello } from './images/trello.png';
 export { default as Loading } from './icons/Loading';
+export { default as Google } from './icons/Google';

@@ -1,16 +1,9 @@
 import { FC } from 'react';
 import { Box, styled } from '@mui/material';
-import dynamic from 'next/dynamic';
 
-import Loading from '@/components/loading';
+import FrontendDeveloperInfo from './FrontendDeveloperInfo';
 
-const ProfileName = dynamic(() => import('../../profile/ProfileName'), {
-  loading: () => <Loading />
-});
-
-const FrontendDeveloperInfo = dynamic(() => import('./FrontendDeveloperInfo'), {
-  loading: () => <Loading />
-});
+import ProfileName from '@/components/profile/ProfileName';
 
 const StyledHeadlines = styled(Box)(() => ({
   display: 'grid',

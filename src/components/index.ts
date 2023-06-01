@@ -6,3 +6,4 @@ export { default as MainServices } from './services';
 export { default as MainBanner } from './banner';
 export { default as MainMySkills } from './my-skills';
 export { default as MainSignIn } from './sign-in';
+export { default as ScrollProgress } from './scroll-progress';

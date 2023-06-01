@@ -1,10 +1,13 @@
-import { FC, ReactNode, useMemo } from 'react';
+import { FC, ReactNode } from 'react';
 import { Box, BoxProps, styled } from '@mui/material';
-import { useRouter } from 'next/router';
 import { Link } from 'react-scroll';
 
+import { useAppDispatch, useAppSelector } from '@/hook/react-redux';
+import { PagesTitles } from '@/utils/constants/pages';
+import { actionLandingPositionSlice } from '@/store/slices/landing-position';
+
 interface MenuItemProps {
-  to: string;
+  to: PagesTitles;
   children: ReactNode;
 }
 
@@ -18,18 +21,25 @@ const StyledMenuItem = styled(Box)<IStyledMenuItem>(({ active }) => ({
 }));
 
 const MenuItem: FC<MenuItemProps> = ({ to, children }) => {
-  const { pathname } = useRouter();
+  const { position } = useAppSelector((state) => state.landingPosition.data);
 
-  const isActive = useMemo(() => {
-    if (to === '/') {
-      return pathname.split('/').join('') === '';
-    }
-    return pathname.split('/').includes(to);
-  }, [pathname, to]);
+  const dispatch = useAppDispatch();
+
+  const clickHandler = () => {
+    dispatch(actionLandingPositionSlice.changePosition(to));
+  };
 
   return (
-    <StyledMenuItem active={String(isActive)}>
-      <Link activeclassName="active" to={to} spy={true} smooth={true} offset={-70} duration={500}>
+    <StyledMenuItem active={String(position === to)}>
+      <Link
+        activeClass="active"
+        to={to}
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+        onClick={clickHandler}
+      >
         {children}
       </Link>
     </StyledMenuItem>

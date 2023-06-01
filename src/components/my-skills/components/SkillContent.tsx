@@ -8,7 +8,7 @@ interface ISkillContentProps extends GridProps {
 }
 
 const StyledSkillContent = styled(Grid)(() => ({
-  height: '35vh',
+  height: '65vh',
   overflow: 'auto'
 }));
 

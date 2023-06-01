@@ -5,7 +5,9 @@ import ProfilePicture from '../profile/ProfilePicture';
 
 import AboutHeadlines from './components/AboutHeadlines';
 
-const StyledMainAbout = styled(Grid)(() => ({}));
+const StyledMainAbout = styled(Grid)(() => ({
+  padding: '2.5rem 0'
+}));
 
 const MainAbout: FC = () => {
   return (

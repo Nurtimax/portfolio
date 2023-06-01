@@ -20,8 +20,12 @@ const StyledProjectsItem = styled(Grid)(({ theme }) => ({
   gridTemplateColumns: '1fr 2fr',
   padding: '1rem 0',
   gap: '1rem',
+  borderBottom: '1px solid red',
   [theme.breakpoints.down('sm')]: {
     gridTemplateColumns: '1fr'
+  },
+  '&:last-child': {
+    borderBottom: 'none'
   }
 }));
 
