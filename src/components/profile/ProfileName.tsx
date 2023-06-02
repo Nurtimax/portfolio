@@ -17,11 +17,8 @@ const ProfileName: FC = () => {
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <Typography component="h4" variant="h6">
-          I'm
-        </Typography>
         <Typography component="h2" variant="h4">
-          Nurtilek Maksatbek
+          Нуртилек Максатбек
         </Typography>
       </motion.div>
     </StyledProfileName>

@@ -34,7 +34,7 @@ const Layout: FC = () => {
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
 
-    if (scrollPosition > 5500) {
+    if (scrollPosition > 5000) {
       dispatch(actionLandingPositionSlice.changePosition('contact'));
     } else if (scrollPosition > 3500) {
       dispatch(actionLandingPositionSlice.changePosition('projects'));

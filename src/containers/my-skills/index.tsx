@@ -11,8 +11,7 @@ interface IMySkillsProps {
 
 const StyledMySkills = styled(Box)(() => ({
   background: '#292929',
-  padding: '3rem 0',
-  height: '100vh'
+  padding: '3rem 0'
 }));
 
 const MySkills: FC<IMySkillsProps> = () => {
