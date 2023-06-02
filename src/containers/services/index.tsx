@@ -5,9 +5,7 @@ import { Element } from 'react-scroll';
 import { MainServices } from '@/components';
 import { PAGES } from '@/utils/constants/pages';
 
-const StyledServices = styled(Box)(() => ({
-  height: '100vh'
-}));
+const StyledServices = styled(Box)(() => ({}));
 
 const Services: FC = () => {
   return (

@@ -28,12 +28,12 @@ const StyledCard = styled(Card)(({ theme }) => ({
   height: '100%',
   background: '#eaf6fe',
   [theme.breakpoints.down('sm')]: {
-    width: '55% !important',
-    height: '80% !important'
+    width: '100% !important',
+    height: '100% !important'
   },
   [theme.breakpoints.down('md')]: {
-    width: '45%',
-    height: '70%'
+    width: '80%',
+    height: '100%'
   }
 }));
 
