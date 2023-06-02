@@ -20,4 +20,12 @@ interface IPages {
   SIGNUP: '/sign-up';
 }
 
-export type PagesTitles = '/' | 'about' | 'services' | 'projects' | 'contact' | 'my-skills';
+export type PagesTitles =
+  | '/'
+  | 'about'
+  | 'services'
+  | 'projects'
+  | 'contact'
+  | 'my-skills'
+  | '/sign-in'
+  | '/sign-up';
