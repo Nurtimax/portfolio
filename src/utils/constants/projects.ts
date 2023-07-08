@@ -105,7 +105,7 @@ const PROJECTS: IProjects[] = [
     links: [
       {
         id: '1_1',
-        link: 'https://nurtimax.github.io/Financial-Planner/',
+        link: 'https://financial-planner-three.vercel.app/',
         type: 'demo',
         ICON: FiExternalLink
       },
