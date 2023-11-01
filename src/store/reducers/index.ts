@@ -1,11 +1,11 @@
 import { combineReducers } from '@reduxjs/toolkit';
 
-import { colorMode } from '../slices';
-import landingPositionSlice from '../slices/landing-position';
+import { authentication, colorMode, landingPositionSlice } from '../slices';
 
 const rootReducer = combineReducers({
-  mode: colorMode.reducer,
-  landingPosition: landingPositionSlice.reducer
+  mode: colorMode,
+  landingPosition: landingPositionSlice,
+  auth: authentication
 });
 
 export default rootReducer;

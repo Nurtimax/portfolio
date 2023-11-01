@@ -9,4 +9,4 @@ const colorMode = createSlice({
 });
 
 export const actionColorMode = colorMode.actions;
-export default colorMode;
+export default colorMode.reducer;

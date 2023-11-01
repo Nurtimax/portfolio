@@ -1,21 +1,25 @@
-// Import the functions you need from the SDKs you need
+/* eslint-disable no-undef */
+// eslint-disable-next-line import/default
 import { initializeApp } from 'firebase/app';
 import { getAnalytics } from 'firebase/analytics';
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getStorage } from 'firebase/storage';
 
 // Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: 'AIzaSyATuurpySuRsCR088RFVfOXowFLPox9u8A',
-  authDomain: 'portfolio-8ed46.firebaseapp.com',
-  projectId: 'portfolio-8ed46',
-  storageBucket: 'portfolio-8ed46.appspot.com',
-  messagingSenderId: '813583721080',
-  appId: '1:813583721080:web:4a87599be7556b02f4038d',
-  measurementId: 'G-3Q491P2T8R'
+  apiKey: process.env.NEXT_PUBLIC_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_AUTO_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_ID,
+  measurementId: process.env.NEXT_PUBLIC_MEASUREMENT_ID,
+  databaseURL: process.env.NEXT_PUBLIC_DATA_BASE_URL
 };
 
+const app = initializeApp(firebaseConfig);
+
 // Initialize Firebase
-export const app = initializeApp(firebaseConfig);
 export const analytics = getAnalytics(app);
+export const imageDb = getStorage(app);
+
+export default app;
