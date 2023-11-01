@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { Box, styled } from '@mui/material';
 import Image from 'next/image';
 
-import ReactHookFormImage from '../images/images.png';
+import ReactHookFormImage from '../images/images.svg';
 
 interface IReactHookFormProps {
   [key: string]: unknown;
