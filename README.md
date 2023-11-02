@@ -52,7 +52,7 @@ Here are some of the key skills I possess:
 
 Feel free to get in touch with me through the following channels:
 
-- Email: [maksatbeknurtilek@gmail.com](maksatbeknurtilek@gmail.com)
+- Email: [maksatbeknurtilek@gmail.com](mailto:maksatbeknurtilek@gmail.com)
 - LinkedIn: [Nurtilek Maksatbek](https://www.linkedin.com/in/nurtilek-maksatbek-900688249/)
 - GitHub: [Nurtimax](https://github.com/Nurtimax/)
 
