@@ -4,7 +4,6 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
-      <title>Nurtimax</title>
       <body>
         <Main />
         <NextScript />

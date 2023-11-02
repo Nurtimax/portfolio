@@ -20,4 +20,4 @@ const landingPositionSlice = createSlice({
 });
 export const actionLandingPositionSlice = landingPositionSlice.actions;
 
-export default landingPositionSlice;
+export default landingPositionSlice.reducer;
